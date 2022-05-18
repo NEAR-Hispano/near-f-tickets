@@ -1,0 +1,19 @@
+.fade-anim img {
+  animation: fadeAnim 0.5s ease-out;
+}
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bg-style {
+  opacity: 0.2;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
