@@ -39,17 +39,19 @@ export default function EventData({ event }: EventProps) {
     );
   };
   return (
-    <div className="min-h-screen lg:flex lg:flex-col">
-      <div className="mb-28">
+    <div className="px-7 mt-8 mx-auto">
+    <div className="content-center min-h-screen md:flex md:flex-col lg:flex lg:flex-col px-8 mt-3">
+      <div className="mb-28 bg-lime-800 rounded-tr-md rounded-tl-md px-3 mt-3 rounded-b-md">
         <div className="lg:flex lg:justify-between lg:w-full lg:h-auto lg:p-8 bg-bg-event">
           <div className="text-figma-300">
             <h2 className="lg:text-9xl font-semibold">{event?.name}</h2>
             <h2 className="lg:text-2xl ">{event?.description}</h2>
           </div>
-          <div className="lg:w-1/3">
+          <div className="px-8 lg:w-1/3 md:w-2/4 sm:w-2/4 mt-8">
             <img src={event?.banner} alt={event?.name} className="rounded-xl" />
           </div>
         </div>
+        <div className="bg-emerald-900 rounded-2xl lg:py-7 lg:px-11 lg:text-center">
         <div className="text-figma-300 lg:p-8 lg:flex lg:justify-between">
           <div>
             <h2 className="lg:text-3xl">Event Information</h2>
@@ -84,12 +86,13 @@ export default function EventData({ event }: EventProps) {
                 <h2 className="text-xl">Organizer: {event?.organizer}</h2>
               </div>
             )}
+            </div>
           </div>
         </div>
       </div>
-      <div className="lg:fixed lg:bottom-0 w-full">
+      <div className="lg:fixed lg:bottom-0 md:fixed md:bottom-0 w-full sm:content-center">
         <div className="bg-figma-400 rounded-t-2xl lg:py-7 lg:px-11 lg:text-center">
-          <div className="lg:flex lg:justify-between">
+          <div className="lg:flex lg:justify-evenly md:flex md:justify-evenly sm:justify-center ">
             <div>
               <h2 className="text-figma-500">Date</h2>
               <h2>17 Apr 2022</h2>
@@ -171,6 +174,7 @@ export default function EventData({ event }: EventProps) {
           ))}
         </div>
       </Modal>
+    </div>
     </div>
   );
 }
